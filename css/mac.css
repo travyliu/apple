@@ -1,0 +1,669 @@
+@font-face {
+    font-family:'Myriad Set Pro';
+    font-style:normal;
+    font-weight:100;
+    src:local('Myriad Set Pro'), url("../fonts/myriad-set-pro_text.woff") format("woff"); 
+    /* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
+}
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+body{
+    font-family:"Myriad Set Pro","微软雅黑";
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 400;
+    letter-spacing: normal;
+    
+    color: #333;
+    font-style: normal;
+}
+ul,li,h1,h2,h3,h4,h5,h6,p,figure{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    list-style: none;
+}
+a{
+    /* color: black; */
+    text-decoration: none;
+}
+#ac-globalnav{ 
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display: block;
+    margin: 0;
+    width: 100%;
+     /* min-width: 1024px; */ 
+    height: 48px;
+    max-height: 44px;
+    
+    background: rgba(0,0,0,0.8);
+    font-size: 18px;
+    /* -webkit-user-select: none; */
+}
+#ac-globalnav .ac-content{
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 22px;
+    position: relative;
+    z-index: 11;
+}
+#ac-globalnav .ac-head{
+    display: none;
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    overflow: hidden;
+}
+#ac-globalnav .ac-head li{
+    display:block;
+    height: 48px;
+    line-height: 48px;
+
+}
+#ac-globalnav .ac-head .menuicon{
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 48px;
+    border-bottom: none;
+}
+#ac-globalnav .ac-head .gn-apple{
+    position: absolute;
+    width: 48px;
+    top: 0;
+    left: 50%;
+    margin-left: -24px;
+    text-align: center;
+    z-index: 11;
+}
+#ac-globalnav .ac-head .gn-bag{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* width: 48px; */
+    z-index: 11;
+}
+#ac-globalnav .ac-head li a{
+    display: inline-block;
+    position: relative;
+    z-index: 12;
+    color: #fff;
+    height: 48px;
+    padding: 0 10px;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+#ac-globalnav .ac-head .apples{
+    
+   width:20px;
+   background: url("../svg/apple_big.svg") no-repeat center center;
+}
+#ac-globalnav .ac-head .beg{
+  transition: transform 0.25s 0.55s ease-out;
+     width:30px;
+    background: url("../svg/beg.svg") no-repeat center center;
+}
+#ac-menustate{
+  display: none;
+}
+#ac-globalnav .ac-head #menuicon-label{
+          display: block;
+          position: absolute;
+          /* z-index: 3; */
+          top: 0px;
+          width: 48px;
+          height: 48px;
+          cursor: pointer;
+          transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    -webkit-tap-highlight-color: transparent;
+   }
+   #ac-globalnav #menuicon-label .menuicon-border-top{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transform: rotate(0deg);
+    z-index: 4;
+   }
+   #ac-globalnav #menuicon-label .menuicon-border-bottom{
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transform: rotate(0deg);
+   }
+   #ac-globalnav #menuicon-label .menuicon-border-crust{
+
+    display: block;
+    width: 17px;
+    border-bottom: 1px solid #fff;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    left: 16px;
+    z-index: 1;
+    box-sizing: content-box;
+   }
+   #ac-globalnav #menuicon-label .menuicon-border-top .menuicon-border-crust-top{
+    top: 23px;
+   transition: transform 0.2s 0.2s;
+    
+    transform: translateY(-3px);
+  }
+  #ac-globalnav #menuicon-label .menuicon-border-bottom .menuicon-border-crust-bottom{
+    
+    /* transition: transform 0.2s; */
+    bottom: 23px;
+    transform: translateY(3px);
+  }
+  #ac-menustate:checked~#ac-globalnav #menuicon-label{
+     transform: rotate(90deg);
+  }
+  #ac-menustate:checked~#ac-globalnav #menuicon-label .menuicon-border-top{
+    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.2s;
+    transform: rotate(45deg);
+  }
+  #ac-menustate:checked~#ac-globalnav #menuicon-label .menuicon-border.menuicon-border-bottom{
+    transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.2s;
+    transform: rotate(-45deg);
+  }
+  #ac-menustate:checked~#ac-globalnav #menuicon-label .menuicon-border-crust-top{
+    transform: translateY(0px);
+  }
+  #ac-menustate:checked~#ac-globalnav #menuicon-label .menuicon-border-crust-bottom{
+    transition: transform 0.2s;
+    transform: translateY(0px);
+  }
+#ac-menustate:checked~#ac-globalnav .gn-bag .beg{
+  transform: translateX(200%);
+  -webkit-transition: -webkit-transform 0.55s 0.25s ease-out;
+}
+.ac-list{
+    cursor: default;
+    margin: 0 -10px;
+    text-align: justify;
+    width: auto;
+    height: 44px;
+}
+ .ac-list li{
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    z-index: 11;
+    vertical-align: top;
+}
+.ac-list li a{
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    z-index: 12;
+    color: #fff;
+    padding: 0 10px;
+    white-space: nowrap;
+    vertical-align: top;
+}
+.clearfix:after{
+   content:""; 
+   display: inline-block;
+   width: 100%;
+   height: 0;
+   font-size: 0;
+   line-height: 0;
+   clear: both;
+} 
+.span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+.ac-list .apple{
+    width:20px;
+    background: url("../svg/apple_logo.svg") no-repeat center center;
+}
+
+.ac-list .mac{
+    width:1.722em;
+    background: url("../svg/mac.svg") no-repeat center center ;
+}
+.ac-list .ipad{
+    width:1.666em;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    background: url("../svg/ipad.svg") no-repeat center center ;
+}
+.ac-list .iphone{
+    width:2.666em;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    background: url("../svg/iphone.svg") no-repeat center center;
+}
+.ac-list .watch{
+    width:2.444em;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    background: url("../svg/watch.svg") no-repeat center center;
+}
+.ac-list .tv{
+    width:1.1111em;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    background: url("../svg/tv.svg") no-repeat center center;
+}
+.ac-list .music{
+    width:2.2222em;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    background: url("../svg/music.svg") no-repeat center center;
+}
+.ac-list .support{
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    width:3.166em;
+    background: url("../svg/support.svg") no-repeat center center;
+}
+.ac-list .sousuo{
+    width:20px;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    background-size: 20px 44px;
+    background: url("../svg/sousuo.svg")  no-repeat center center;
+}
+.ac-list .gouwudei{
+    width:18px;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    background-size: 18px 44px;
+    background: url("../svg/gouwudai.svg")  no-repeat center center;
+}
+
+
+@media (max-width:768px){
+    #ac-globalnav .ac-head{
+        display: block;
+    }
+  #ac-globalnav{
+      max-height: none;
+      transition: background 0.35s linear,height 0.35s ease-in;
+   }      
+   #ac-globalnav .ac-content{
+   padding: 0;
+   margin: 0 auto;
+   z-index: 12;
+    width: 100%;
+   height: 100%;
+   /* height: 48px; */ 
+   }
+  #ac-menustate:checked~#ac-globalnav{
+    height: 100%;
+    background: #000;
+    transition: background 0.35s linear,height 0.35s ease-in 200ms;
+    /* z-index: 12; */
+  } 
+  #ac-globalnav .ac-content .ac-list{
+    position: absolute;
+    z-index: 14;
+    top: 48px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px 48px;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: visibility 0s linear 1s;
+  }
+  #ac-menustate:checked~#ac-globalnav .ac-content .ac-list{
+    display: block;
+    visibility: visible;
+    transition-delay: 0s;
+    
+  } 
+ 
+  .ac-list .ac-item-apple{
+    display: none;
+    }
+   #ac-menustate:checked~#ac-globalnav .ac-content .ac-list li{
+        opacity: 1;
+    pointer-events: auto;
+    transition-delay: 300ms,300ms;
+  }  
+  #ac-globalnav .ac-list li:nth-child(2){
+    width: 100%;
+    height: 47px;
+    border-bottom: 1px solid #333;
+    margin-top: 12px;
+    z-index: 13;
+  }
+ #ac-globalnav .ac-list .ac-items{
+    width: 100%;
+    height: 47px;
+    border-bottom: 1px solid #333;
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+ }
+ #ac-globalnav .ac-list li a{
+  background-position: left center;
+    display: block;
+    outline-offset: 0;
+    padding: 0;
+    width: auto;
+    max-width: none;
+ }
+  #ac-globalnav .ac-list .mac{
+    
+    background-size: 37px 48px;
+    background: url("../svg/mac_xiala.svg") no-repeat;
+}
+.ac-list .ipad{
+    background-size: 35px 48px;
+    background: url("../svg/ipad_xiala.svg") no-repeat ;
+}
+.ac-list .iphone{
+    background-size: 59px 48px;
+    background: url("../svg/iphone_xiala.svg") no-repeat ;
+}
+.ac-list .watch{
+    background-size: 52px 48px;
+    background: url("../svg/watch_watch.svg") no-repeat ;
+}
+.ac-list .tv{
+        background-size: 23px 48px;
+    background: url("../svg/tv_xiala.svg") no-repeat ;
+}
+.ac-list .music{
+    background-size: 48px 48px;
+    background: url("../svg/music_xiala.svg") no-repeat ;
+}
+.ac-list .support{
+    
+    background-size: 69px 49px;
+    background: url("../svg/support_xiala.svg") no-repeat ;
+}
+.ac-list .gouwudei{
+  display: none;
+}
+}
+/*****************************/
+@media only screen and (orientation: landscape) {
+    .ac-familybrowser-items {
+        padding-bottom:49px
+    }
+}
+#ac-familybrowser{
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  z-index: 100;
+  background: rgba(242,242,242,0.6);
+  overflow: hidden;
+  text-align: center; 
+}
+.ac-wrapper{
+  height: 110px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+    .ac-wrapper {
+        height:113px
+    }
+}
+.ac-familybrowser-items{
+  margin: 0 34px;
+  list-style: none;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+}
+.ac-familybrowser-items:before{
+    content: ' ';
+    display: table;
+}
+.ac-familybrowser-items::after{
+    content: ' ';
+    display: table;
+    clear: both;
+}
+.ac-familybrowser-items .macbook{
+    padding-right: 22px;
+    display: inline-block;
+    padding-left: 0 !important;
+    
+}
+.ac-wrapper .ac-familybrowser-items .macbook-air{
+    padding-left: 18px;
+    padding-right: 18px;
+    display: inline-block;
+}
+.macbook-pro{
+  padding-left: 18px;
+  padding-right: 18px;
+  display: inline-block;
+}
+.imac{
+  padding-left: 22px;
+  padding-right: 22px;
+  display: inline-block;
+}
+.mac-pro{
+  padding-left: 18px;
+  padding-right: 18px;
+  display: inline-block;
+}
+.mac-mini{
+    padding-left: 16px;
+    padding-right: 16px;
+    display: inline-block;
+}
+.accesspries{
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+}
+.oxs{
+    padding-left: 8px;
+    padding-right: 8px;
+    display: inline-block;
+}
+.compare{
+    padding-left: 18px;
+    display: inline-block;
+}
+.familybrowser-link{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-top: 13px;
+    margin-bottom: 26px;
+    vertical-align: top;
+    color: inherit;
+}
+#ac-familybrowser .ac-wrapper .ac-familybrowser-items figure{
+    margin-left: auto;
+    margin-right: auto;
+}  
+ .familybrowser-macbook{
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url("../svg/macbook_large.svg");
+     background-size: 46px 54px;
+    height: 54px;
+    width: 46px;
+   
+}
+.familybrowser-macbook-air{
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url("../svg/macbookair_large.svg");
+     background-size: 52px 54px;
+    height: 54px;
+    width: 52px;
+   
+}
+.familybrowser-macbook-pro{
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url("../svg/macbookpro_large.svg");
+     background-size: 58px 54px;
+    height: 54px;
+    width: 58px;
+   
+} 
+.familybrowser-imac{
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url("../svg/imac_large.svg");
+     background-size: 48px 54px;
+    height: 54px;
+    width: 48px;
+   
+} 
+.familybrowser-mac-pro{
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("../svg/macpro_large.svg");
+     background-size: 21px 54px;
+    height: 54px;
+    width: 21px;
+    
+   
+} 
+.familybrowser-mac-mini{
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("../svg/macmini_large.svg");
+     background-size: 28px 54px;
+    height: 54px;
+    width: 28px;
+    
+} 
+.familybrowser-accesspries{
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("../svg/mac_acc_large.svg");
+     background-size: 28px 54px;
+    height: 54px;
+    width: 28px;
+   
+} 
+.familybrowser-oxs{
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("../svg/mac_osx_large.svg");
+     background-size: 30px 54px;
+    height: 54px;
+    width: 30px;
+   
+} 
+.familybrowser-compare{
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("../svg/mac_comp_large.svg");
+     background-size: 70px 54px;
+    height: 54px;
+    width: 70px;
+   
+}   
+.ac-wrapper .ac-familybrowser-items .familybrowser-icon{
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 8px;
+    white-space: normal;
+    color: #333;
+}
+/*****************************/
+.main{
+  overflow: hidden;
+}
+.pagetitle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+   overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+}
+.product-imac{
+   position: relative;
+    z-index: 1;
+    padding-top: 550px;
+    padding-bottom: 502px;
+}
+.section-content{
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+.section-content::before{
+    content: ' ';
+    display: table;
+}
+.product-content{
+    position: relative;
+    z-index: 10;
+    top: -340px;
+    left: 30px;
+    text-align: center;
+    width: 41.6667%;
+    min-height: 2px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.product-headtitle{
+    font-size: 72px;
+    line-height: 1.0556;
+    font-weight: 200;
+    letter-spacing: -0.024em;
+    margin-bottom: 0;
+}
