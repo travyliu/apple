@@ -2,15 +2,15 @@
     font-family:'Myriad Set Pro';
     font-style:normal;
     font-weight:100;
-    src:local('Myriad Set Pro'), url("../fonts/myriad-set-pro_text.woff") format("woff"); 
+    src:local('Myriad Set Pro'), url("../fonts/myriad-set-pro_thin.woff") format("woff"); 
     /* Copyright (c) 1992 Adobe Systems Incorporated. All Rights Reserved. Myriad is a trademark of Adobe Systems Incorporated. */
 }
-article, aside, footer, header, hgroup, main, nav, section {
+article, aside, footer, header, hgroup, main, nav, section,figure {
     display: block;
 }
 
 body{
-    font-family:"Myriad Set Pro","微软雅黑";
+    font-family:'Myriad Set Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif,'微软雅黑';
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -615,6 +615,7 @@ a{
     color: #333;
 }
 /*****************************/
+
 .main{
   overflow: hidden;
 }
@@ -643,10 +644,20 @@ a{
     position: relative;
     z-index: 1;
     height: 100%;
+    text-align: center;
 }
-.section-content::before{
+.row {
+    position: relative;
+    z-index: 1
+}
+
+.row:before,.row:after {
     content: ' ';
-    display: table;
+    display: table
+}
+
+.row:after {
+    clear: both
 }
 .product-content{
     position: relative;
@@ -666,4 +677,860 @@ a{
     font-weight: 200;
     letter-spacing: -0.024em;
     margin-bottom: 0;
+}
+.product-subheadline{
+    font-size: 42px;
+    line-height: 1.1429;
+    font-weight: 200;
+    letter-spacing: -0.01em;
+}
+.moreblock{
+    font-size: 24px;
+    font-weight: 200;
+    letter-spacing: normal;
+    line-height: 2.5em;
+    margin-top: 0.625em;
+    /* display: block; */
+}
+ .more{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #08c;
+}
+.product-imac .large-content{
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    min-height: 2px;
+    padding: 0;
+}
+.product-imac .large-content .image-imac{
+    background-repeat: no-repeat;
+    background-size: 987px 799px;
+    height: 799px;
+    width: 987px;
+    background-image: url("../image/hero_large.jpg");
+    z-index: -1;
+    position: absolute;
+    top: -266px;
+}
+
+.product-accessories{
+    margin-bottom: 0;
+    padding-bottom: 140px;
+}
+.product-accessories .product-content-accessories{
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  width: 66.6667%;
+}
+.large-content-accessories{
+  width: 100%;
+  position: relative;
+    z-index: 1;
+    min-height: 2px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.large-content-accessories .image-accessories{
+  background-repeat: no-repeat;
+    background-size: 1661px 314px;
+    height: 314px;
+    width: 1661px;
+    background-image: url("../image/apple_accessories_large.jpg");
+    z-index: -1;
+    position: absolute;
+    left: -527px;
+    top: 15px;
+}
+.product-macbook{
+   padding-top: 515px;
+   padding-bottom: 375px;
+    position: relative;
+    z-index: 2;
+}
+.product-content-macbook{
+    position: relative;
+    z-index: 15;
+    top: 25px;
+    margin-left: 58.3333%;
+    width: 33.3333%;
+}
+.image-macbook{
+  background-repeat: no-repeat;
+    background-size: 674px 844px;
+    height: 844px;
+    width: 674px;
+    background-image: url("../image/macbook_large.jpg");
+    position: absolute;
+    left: -62px;
+    top: -315px;
+}
+.product-macbook-pro{
+    position: relative;
+    z-index: 1;
+    padding-top: 255px;
+    padding-bottom: 245px;
+}
+
+.product-content-macbook-pro{
+    width: 58.3333%;
+    position: relative;
+    z-index: 1;
+    min-height: 2px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.image-macbook-pro{
+  background-repeat: no-repeat;
+    background-size: 979px 523px;
+    height: 523px;
+    width: 979px;
+    background-image: url("../image/mbpr_large.jpg");
+    position: absolute;
+    top: -123px;
+    left: 185px;
+}
+.product-macbook-air{
+    position: relative;
+    z-index: 1;
+    padding-top: 263px;
+    padding-bottom: 280px;
+}
+.product-content-macbook-air{
+    width: 66.6667%;
+    margin-left: 33.3333%;
+    position: relative;
+    z-index: 1;
+    min-height: 2px;
+    padding: 0;
+    float: left;
+}
+.image-macbook-air{
+  background-repeat: no-repeat;
+    background-size: 927px 474px;
+    height: 474px;
+    width: 927px;
+    background-image: url("../image/mba_large.png");
+    position: absolute;
+    top: -115px;
+    left: -183px;
+}
+
+.product-compare{
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.product-content-compare{
+     padding-top: 92px;
+    padding-bottom: 120px;
+} 
+.secondary-headtitle{
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 52px;
+    line-height: 1.0865;
+    font-weight: 200;
+    letter-spacing: -0.014em;
+    text-align: center;
+}
+.image-compare{
+   background-repeat: no-repeat;
+    background-size: 923px 435px;
+    height: 435px;
+    width: 923px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../image/compare_large.jpg");
+    margin-top: 40px;
+}
+.small-only{
+  display: none;
+}
+.desktop-only{
+  display: block;
+}
+
+.product-ssn{
+    color: #333;
+    opacity: 1;
+    overflow: hidden;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: 1px 541px;
+    background-image: url("../image/startsomethingnew_banner_gradient_large.png");
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    height: 572px;
+    margin-bottom: 24px;
+}
+.product-ssn .section-content{
+    position: relative;
+    z-index: 1;
+    padding-top: 67px;
+}
+.billboard-center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 52px;
+    line-height: 1.0865;
+    font-weight: 200;
+    letter-spacing: -0.014em;
+    margin-bottom: 0.25em;
+} 
+.billboard-copy{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin-bottom: 0.2778em;
+}
+.image-ssn{
+  position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -745px;
+    background-repeat: no-repeat;
+    background-size: 1571px 354px;
+    height: 354px;
+    width: 1571px;
+    background-image: url("../image/startsomethingnew_banner_mac_large.png");
+}
+.shopstrip{
+    padding-top: 99px;
+}
+.shopstrip-content{
+    margin-bottom: 80px;
+    text-align: center;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    min-height: 2px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.shopstrip-icon-headline{
+    display: block;
+}
+.shopstrip-icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.icon-pickup{
+  background-repeat: no-repeat;
+  background-size: 37px 41px;
+  height: 41px;
+  width: 37px;
+  background-image: url("../image/icon_pickup_large.png");
+}
+.icon-pickup{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.shopstrip-headline{
+   font-size: 28px;
+   line-height: 1.1429;
+   font-weight: 200;
+   letter-spacing: normal;
+   margin-bottom: 0.25em;
+   margin-top: 0.6429em;
+}
+.shopstrip-copy{
+    font-size: 18px;
+    line-height: 1.4444;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin: 0;
+}
+.shopstrip-more{
+    font-size: 18px;
+    line-height: 1.4444;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin: 0;
+}
+.icon-shipping{
+  background-repeat: no-repeat;
+    background-size: 36px 40px;
+    height: 40px;
+    width: 36px;
+    background-image: url("../image/icon_shipping_large.png");
+}
+ .fp-billboard,.fp-billboard a {
+    color: #fff;
+}
+
+.fp-billboard{
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 7px;
+}
+.fp-accessories{
+    margin-bottom: 0;
+}
+.image-accessories-mac{
+  background-repeat: no-repeat;
+   background-image: url("../image/accessories_large.jpg");
+}
+.billboard-image{
+    position: relative;
+    background-size: cover !important;
+    background-position: center top;
+    min-height: 600px;
+}
+.billboard-image::before {
+    content: "";
+    display: block;
+    padding-bottom: 41.6667%;
+}
+.billboard-wrapper{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.fp-billboard-content{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    text-align: center;
+}
+.secondary-headline{
+    color: #333;
+    margin-bottom: .1em;
+    font-size: 52px;
+    line-height: 1.0865;
+    font-weight: 200;
+    letter-spacing: -0.014em;
+    text-align: center;
+}
+.fp-billboard .board-more{
+    color: #333;
+}
+.osx-and-icloud{
+    background: #fafafa;
+    padding-top: 65px;
+    padding-bottom: 110px;
+    text-align: left;
+}
+.image-yosemite-icloud{
+    background-repeat: no-repeat;
+    background-size: 765px 315px;
+    height: 315px;
+    width: 765px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../image/partnership_large.png");
+    margin-top: 50px;
+}
+.product-features{
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 95px;
+}
+.section-osx{
+  text-align: left;
+}
+.column{
+    position: relative;
+    z-index: 1;
+    min-height: 2px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.osx{
+  width: 47%;
+}
+.fp-icon-heading{
+  margin-bottom: 15px;
+}
+.app-icon{
+    margin-right: 16px;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-osx{
+  background-repeat: no-repeat;
+    background-size: 52px 52px;
+    height: 52px;
+    width: 52px;
+    background-image: url("../image/hero_icon_large.png");
+}
+.fp-icon-headline{
+    font-size: 42px;
+    line-height: 1.1429;
+    font-weight: 200;
+    letter-spacing: -0.01em;
+    margin: 0;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.product-features-content{
+  margin-left: 76px;
+}
+.icloud{
+    width: 45%;
+    left: 7%;
+}
+.icon-icloud{
+  background-repeat: no-repeat;
+    background-size: 48px 48px;
+    height: 48px;
+    width: 48px;
+    background-image: url("../image/icloud_icon_large.png");
+}
+.more-osx{
+  margin-left: 0;
+}
+
+.fp-amazing-apps .gallery-wrapper {
+    margin-top: 100px;
+    margin-bottom: 110px
+}
+.fp-secondary-headline{
+    font-size: 52px;
+    line-height: 1.0865;
+    font-weight: 200;
+    letter-spacing: -0.014em;
+    margin-bottom: 0.3333em;
+    text-align: center;
+}
+.fp-amazing-apps .gallery-headline-copy .center-paragraph{
+      width: 735px;
+}
+.fp-amazing-apps .center-paragraph{
+    min-height: 52px;
+    text-align: center;
+}
+.large-centered{
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+.more-amazing{
+  color: #08c;
+}
+.more-amazing:hover{
+  text-decoration: underline;
+}
+.ac-browser{
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.fp-amazing-apps .apps{
+  margin: 50px -24px 15px;
+} 
+.ac-browser-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.fp-amazing-apps .apps .apps-wrapper{
+  min-height: 103px;
+}
+.ac-browser-items{
+    margin: 0 34px;
+    list-style: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+@media only screen and (orientation: landscape){
+.ac-browser-items{
+    padding-bottom: 49px;
+}
+}
+.ac-browser-item{
+  display: inline-block;
+  padding: 0;
+}
+.ac-browser-item:first-child{
+    padding-left: 0 !important;
+}
+.fp-amazing-apps .apps .apps-item.current{
+    border-bottom-color: #333
+}
+.fp-amazing-apps .apps .apps-item{
+    font-size: 14px;
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: #333;
+    min-width: 106px;
+}
+
+.fp-amazing-apps .apps .apps-item figure{
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 77px
+}
+.fp-amazing-apps .apps .image-photos-nav{
+  background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_photos_large.png");
+}
+.fp-amazing-apps .apps .image-imovie-nav{
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_imovie_large.png");
+}
+.fp-amazing-apps .apps .image-garageband-nav{
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_garageband_large.png");
+}
+.fp-amazing-apps .apps .image-pages-nav{
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_pages_large.png");
+}
+.fp-amazing-apps .apps .image-numbers-nav{
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_numbers_large.png");
+}
+.fp-amazing-apps .apps .image-keynote-nav{
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_keynote_large.png");
+}
+.fp-amazing-apps .apps .image-safari-nav{
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_safari_large.png");
+}
+button{
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    vertical-align: inherit;
+    background: none;
+    border: 0;
+    box-sizing: content-box;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.ac-browser-paddle-left,.ac-browser-paddle-right{
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 200;
+    letter-spacing: normal;
+    margin: 0;
+    padding: 0;
+    width: 34px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    color: #333;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 150ms ease-out,color 100ms ease-in-out;
+}
+.ac-browser-paddle-left{
+    left: 0;
+    border-right: 1px solid rgba(102,102,102,0.35);
+}
+.ac-browser-paddle-right{
+    right: 0;
+    border-left: 1px solid rgba(102,102,102,0.35);
+}
+button:disabled{
+    cursor: default;
+}
+.ac-browser-paddle-left .icon{
+    margin-left: 8px;
+}
+.ac-browser-paddle-right .icon{
+    margin-right: 8px;
+}
+
+.fp-amazing-apps .ac-gallery{
+    position: relative;
+    text-align: left;
+    height: 540px;
+}
+.fp-amazing-apps .ac-gallery .ac-gallery-content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+}
+.large-8{
+  width: 66.6667%;
+}
+.fp-amazing-apps .gallery-apps-built-in .slide{
+    margin-left: -78px;
+}
+
+.fp-amazing-apps .image-bia-photos{
+    background-repeat: no-repeat;
+    background-size: 670px 540px;
+    height: 540px;
+    width: 670px;
+    background-image: url("../image/bia_photos_large.jpg");
+}
+.fp-amazing-apps .description{
+    padding-top: 50px;
+}
+.large-4{
+    width: 33.3333%;
+}
+.fp-amazing-apps .description figure{
+    margin-bottom: 15px;
+    min-height: 97px;
+}
+.fp-amazing-apps .image-section-photos-icon{
+    background-repeat: no-repeat;
+    background-size: 74px 74px;
+    height: 74px;
+    width: 74px;
+    background-image: url("../image/bia_photos_header_large.png");
+}
+.fp-amazing-apps .image-bia-imovie {
+    background-repeat: no-repeat;
+    background-size: 670px 540px;
+    height: 540px;
+    width: 670px;
+    background-image: url("../image/bia_imovie_large.jpg");
+}
+
+.fp-amazing-apps .apps .image-fcp-nav {
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_finalcut_large.png");
+}
+.fp-amazing-apps .apps .image-lpx-nav {
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_logicpro_large.png");
+}
+.fp-amazing-apps .apps .image-motion-nav {
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_motion_large.png");
+}
+.fp-amazing-apps .apps .image-compressor-nav {
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_compressor_large.png");
+}
+.fp-amazing-apps .apps .image-mainstage-nav {
+    background-repeat: no-repeat;
+    background-size: 77px 77px;
+    height: 77px;
+    width: 77px;
+    background-image: url("../image/nav_icon_mainstage_large.png");
+}
+
+.fp-amazing-apps .ac-gallery .ac-gallery-content.longest-content {
+    position: relative;
+}
+.large-8 {
+    width: 66.6667%;
+}
+.large-push-4 {
+    left: 33.3333%;
+    right: auto;
+}
+
+.fp-amazing-apps .image-proapps-fcp {
+    background-repeat: no-repeat;
+    background-size: 789px 462px;
+    height: 462px;
+    width: 789px;
+    background-image: url("../image/pro_finalcut_large.jpg");
+}
+.large-pull-8 {
+    right: 66.6667%;
+    left: auto;
+}
+
+.large-4 {
+    width: 33.3333%;
+}
+
+.fp-amazing-apps .image-section-fcp-icon {
+    background-repeat: no-repeat;
+    background-size: 74px 72px;
+    height: 72px;
+    width: 74px;
+    background-image: url("../image/pro_finalcut_header_large.png");
+}
+
+.fp-billboard-left {
+    text-align: left;
+}
+
+
+.fp-billboard-image {
+    position: relative;
+    background-size: cover !important;
+    background-position: center top;
+    min-height: 600px;
+}
+.fp-education .image-macforeducation {
+    background-repeat: no-repeat;
+    background-image: url("../image/education_large.jpg");
+}
+.fp-billboard-image::before {
+    content: "";
+    display: block;
+    padding-bottom: 41.6667%;
+}
+.fp-billboard-wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.fp-billboard-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.fp-billboard-left .fp-billboard-content {
+    margin-left: 80px;
+}
+.fp-billboard-headline{
+    margin-bottom: 0.25em;
+}
+.fp-billboard-headline {
+    font-size: 52px;
+    line-height: 1.0865;
+    font-weight: 200;
+    letter-spacing: -0.014em;
+    text-align: left;
+}
+.fp-billboard-copy, .fp-billboard-moreblock .more {
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin-bottom: 0.2778em;
+    text-align: left;
+}
+.fp-billboard-moreblock {
+    display: block;
+}
+.fp-moreblock {
+    font-size: 24px;
+    font-weight: 200;
+    letter-spacing: normal;
+    line-height: 2.5em;
+}
+.fp-moreblock-left:before, .fp-moreblock-left:after {
+    content: ' ';
+    display: table;
+}
+
+.fp-moreblock-left:before, .fp-moreblock-left:after {
+    content: ' ';
+    display: table;
+}
+.fp-moreblock-left:after {
+    clear: both;
+}
+.fp-moreblock-left .more {
+    float: left;
+    clear: both;
+    margin-right: 0;
+    margin-left: 0;
+}
+.fp-billboard-moreblock .more {
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin-bottom: 0.2778em;
+}
+
+.fp-business .image-macforbusiness {
+    background-repeat: no-repeat;
+    
+    background-image: url("../image/business_large.jpg");
+}
+.large-6 {
+    width: 50%;
+} 
+.fp-billboard-right .fp-billboard-content {
+    margin-left: 510px;
+}
+
+.fp-workshops .image-workshops-retail {
+    background-repeat: no-repeat;
+    background-image: url("../image/workshops_large.jpg");
+}
+.fp-workshops .fp-billboard-headline {
+    margin-left: auto;
+    margin-right: auto;
+    width: 62%;
+    text-align: center;
+}
+.fp-workshops .fp-billboard-copy {
+    width: 62%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
